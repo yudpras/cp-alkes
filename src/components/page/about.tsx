@@ -1,0 +1,25 @@
+import Image from 'next/image';
+import { Button } from '../ui/button';
+export default function About() {
+  return (
+    <div className="flex flex-row items-center justify-center my-[5%] mx-[7%]">
+        <div className="w-1/2">
+            <h1 className="text-4xl font-bold mb-4">Tentang Kami</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus maxime et culpa quibusdam. Soluta fugiat quidem repudiandae facere natus voluptas tempora quam consequatur dolor provident eius eum sint omnis, eligendi ducimus, qui rem aspernatur at earum harum quisquam voluptatum. Asperiores sequi corrupti sit eius aspernatur veniam, velit quo tempore animi aperiam eos vero accusantium aliquam hic blanditiis repudiandae dolores sed! Deserunt molestias maxime nemo laudantium? Delectus ratione dolorem, doloribus molestiae a dolor corrupti dignissimos velit amet laudantium debitis nulla nostrum unde incidunt expedita. Iusto laudantium quis a ex cumque, necessitatibus quo molestiae in voluptatibus ullam tempora fugiat vero possimus doloribus.</p>
+            <Button className="hover:cursor-pointer mt-4" variant={"destructive"}>
+                Selengkapnya
+            </Button>
+        </div>
+        <div className="w-1/2 relative h-[100vh] rounded-b-[3rem] overflow-hidden">
+            <Image
+                src="/about.jpeg"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                alt="About Alat Kesehatan"
+                className="rounded-b-[3rem]"
+            />
+        </div>
+    </div>
+  );
+}
