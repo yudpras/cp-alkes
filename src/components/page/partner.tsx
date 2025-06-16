@@ -17,7 +17,7 @@ export default function Partner() {
         });
     }, []);
   return (
-    <div id="partner" className="mx-[7%] py-30">
+    <div id="partner" className="mx-[7%] py-20">
       <h1 className="text-center text-3xl font-bold mb-6">Partner Kami</h1>
       <div className="flex flex-wrap gap-4 justify-center">
             <div className="border rounded-lg shadow-md p-3 bg-white flex items-center justify-center" data-aos="flip-left">
