@@ -13,6 +13,10 @@ export default function Banner() {
         once: true,
         });
     }, []);
+    const scrollToSection = (id:string) => {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    };
   return (
     <div id="home" className="h-[70vh] text-white flex items-center justify-center rounded-b-[3rem]">
         <div className="relative w-full h-full rounded-b-[3rem]">
@@ -32,7 +36,7 @@ export default function Banner() {
                         <h1 className="text-4xl md:text-6xl font-bold">PT Alkes Maju Makmur</h1>  
                         <p className="sm:text-sm md:text-2xl my-[2%]">Selamat datang di website kami. Kami adalah distributor alat kesehatan dan laboratorium di Indonesia. Kami selalu memberi produk terbaik dan mengedepankan kepuasan pelanggan kami.</p>
                         {/* <button className="rounded-xl border px-3 py-2 mt-5 hover:cursor-pointer bg-primary">Lihat Produk</button> */}
-                        <Button className="hover:cursor-pointer " variant={"destructive"}>
+                        <Button className="hover:cursor-pointer " variant={"destructive"} onClick={() => scrollToSection('product')}>
                             Lihat Produk
                         </Button>
                     </div>
